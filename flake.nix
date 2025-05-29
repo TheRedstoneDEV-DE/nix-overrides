@@ -14,6 +14,7 @@
         tuxedo-rs = super.callPackage ./pkgs/tuxedo-rs/package.nix { };
         drumkv1 = super.callPackage ./pkgs/drumkv1/default.nix { };
         idtech4 = super.callPackage ./pkgs/idtech4/package.nix { };
+        tutka-qt6 = super.callPackage ./pkgs/tutka-qt6/package.nix { };
       });
 
       pkgs = import nixpkgs {
@@ -29,6 +30,7 @@
       packages.x86_64-linux.tuxedo-rs = pkgs.tuxedo-rs;
       packages.x86_64-linux.drumkv1 = pkgs.drumkv1;
       packages.x86_64-linux.idtech4 = pkgs.idtech4;
+      packages.x86_64-linux.tutka-qt6 = pkgs.tutka-qt6;
     };
 }
 
