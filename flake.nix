@@ -12,6 +12,7 @@
       # Import Nixpkgs and apply the overlay from your custom repository
       overlay =  ( self: super: {
         tuxedo-rs = super.callPackage ./pkgs/tuxedo-rs/package.nix { };
+        drumkv1 = super.callPackage ./pkgs/drumkv1/default.nix { };
       });
 
       pkgs = import nixpkgs {
@@ -25,6 +26,7 @@
     {
       overrides = overlay;
       packages.x86_64-linux.tuxedo-rs = pkgs.tuxedo-rs;
+      packages.x86_64-linux.drumkv1 = pkgs.drumkv1;
     };
 }
 
