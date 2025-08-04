@@ -10,9 +10,9 @@
 ,  xorg
 }:
 
-stdenv.mkDerivation rec {
+stdenv.mkDerivation {
   pname = "tutka-qt6";
-  version = "1.0.0";
+  version = "1.1.3";
 
   src = fetchFromGitHub {
     owner = "TheRedstoneDEV-DE";
@@ -49,12 +49,12 @@ stdenv.mkDerivation rec {
   nativeBuildInputs = [ pkg-config qt6.qttools qt6.wrapQtAppsHook ];
   
   meta = with lib; {
-    description = "Old-school drum-kit sampler synthesizer with stereo fx";
+    description = "a free (as in freedom) tracker style MIDI sequencer for GNU/Linux and Mac OS X";
     mainProgram = "tutka";
-    homepage = "http://drumkv1.sourceforge.net/";
-    license = licenses.gpl2Plus;
+    homepage = "https://www.nongnu.org/tutka/";
+    license = licenses.gpl2;
     platforms = platforms.linux;
-    maintainers = [ maintainers.goibhniu ];
+    maintainers = [ maintainers.theredstonedev ];
   };
 }
 
