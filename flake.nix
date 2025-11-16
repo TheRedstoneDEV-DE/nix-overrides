@@ -16,6 +16,7 @@
         idtech4 = super.callPackage ./pkgs/idtech4/package.nix { };
         tutka-qt6 = super.callPackage ./pkgs/tutka-qt6/package.nix { };
         ostui = super.callPackage ./pkgs/ostui/package.nix { };
+        gamescope-patched-input = super.callPackage ./pkgs/gamescope-patched-input/package.nix { };
       });
 
       pkgs = import nixpkgs {
@@ -33,6 +34,7 @@
       packages.x86_64-linux.idtech4 = pkgs.idtech4;
       packages.x86_64-linux.tutka-qt6 = pkgs.tutka-qt6;
       packages.x86_64-linux.ostui = pkgs.ostui;
+      packages.x86_64-linux.gamescope-patched-input = pkgs.gamescope-patched-input;
     };
 }
 
